@@ -2,7 +2,14 @@ import React, { useState, useEffect } from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import {
+  faArrowLeft,
+  faArrowRight,
+  faChevronRight,
+  faStar,
+  faTrophy,
+  faTruck,
+} from "@fortawesome/free-solid-svg-icons";
 
 function ProductView() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -174,12 +181,79 @@ function ProductView() {
         </div>
         <div
           style={{
-            flex: 3,
-            backgroundColor: "green",
+            flex: 10,
+            backgroundColor: "white",
             margin: "5px",
             borderRadius: "5px",
           }}
-        ></div>
+        >
+          <h2 style={{ fontWeight: "bold", textAlign: "center" }}>
+            KHAY ĐỰNG THÔNG MINH KÈM DÂY SẠC
+          </h2>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              alignItems: "center",
+            }}
+          >
+            <FontAwesomeIcon
+              style={{ color: "yellow", margin: "5px" }}
+              icon={faStar}
+            />
+            <p style={{ color: "red", opacity: 0.5 }}>4.9/5 | 13,4k</p>
+            <p
+              style={{
+                color: "grey",
+                opacity: 0.7,
+                margin: "5px",
+              }}
+            >
+              đã được bán
+            </p>
+
+            <FontAwesomeIcon
+              style={{
+                color: "grey",
+                opacity: 0.7,
+                marginLeft: "30%",
+                marginRight: "5px",
+              }}
+              icon={faTruck}
+            />
+            <p style={{ color: "grey", opacity: 0.7 }}>Miễn phí vận chuyển</p>
+          </div>
+          <hr
+            style={{
+              color: "grey",
+              opacity: 0.5,
+              margin: "0 5px",
+            }}
+          ></hr>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              alignItems: "center",
+              marginTop: "5px",
+            }}
+          >
+            <FontAwesomeIcon
+              style={{ color: "red", margin: " 0 5px" }}
+              icon={faTrophy}
+            />
+            <p style={{ color: "red", opacity: 0.6 }}>Sản phẩm hàng đầu !</p>
+            <FontAwesomeIcon
+              icon={faChevronRight}
+              style={{
+                fontSize: "18px",
+                color: "red",
+                opacity: 0.6,
+                marginLeft: "50%",
+              }}
+            />{" "}
+          </div>
+        </div>
         <div
           style={{
             flex: 1,
